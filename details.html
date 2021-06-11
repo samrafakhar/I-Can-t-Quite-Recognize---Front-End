@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+<link rel="stylesheet" href="css/details.css" >
+<link rel="stylesheet" href="css/fontawesome.min.css" >
+<link rel="stylesheet" href="css/fontawesome.css" >
+<link rel="stylesheet" href="css/all.css">
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+.Slideshow{
+	display:none;
+	width: 100%;
+	height:97%;
+}
+</style>
+</head>
+<body>
+<div class="mainbody">
+	<div>
+		<i class="fas fa-times" style="color:#89C0C7;background-color:#444546;border-radius:50%;float:right;font:60px;margin-right:15px;margin-top:35px;" onClick="returnToPrevious()"></i>
+		<center><div class="w3-jumbo"><i class="fas fa-eye" style="color:#0E354B;background-color:#89C0C7;border-radius:50%; font-size: 50px;margin-top:10px;"></i></div></center>&nbsp;
+	</div>
+	<div class="w3-content w3-display-container" style="top:0px;">
+		<img class="Slideshow" src="images/slide1.jpg">
+		<img class="Slideshow" src="images/slide2.jpg">
+		<img class="Slideshow" src="images/slide3.jpg">
+		<img class="Slideshow" src="images/slide4.jpg">
+		<img class="Slideshow" src="images/slide5.jpg">
+		<img class="Slideshow" src="images/slide6.jpg">
+
+		<button class="w3-button w3-display-left" onclick="Slide(-1)">&#10094;</button>
+		<button class="w3-button w3-display-right" onclick="Slide(+1)">&#10095;</button>
+	</div>
+		<script>
+		function returnToPrevious() {
+		  window.history.back();
+		}
+		/*slideshow*/
+		var Index = 1;
+		showSlides(Index);
+		function Slide(i) {
+		  showSlides(Index += i);
+		}
+
+		function showSlides(num) {
+		  var currentSlide = document.getElementsByClassName("Slideshow");
+		  if (num > currentSlide.length) 
+		  {
+			Index = 1 //endslide to first - wrap-around
+		  };
+		  if (num < 1)
+			{Index = currentSlide.length};//endslide if requested slide no. is in negative
+		  var j;
+		  for (j = 0; j < currentSlide.length; j++) {
+			currentSlide[j].style.display = "none";
+		  }
+		  currentSlide[Index-1].style.display = "block";
+		}
+
+	</script>
+</div>
+</body>
+</html>

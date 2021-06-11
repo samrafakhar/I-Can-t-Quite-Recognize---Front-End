@@ -1,0 +1,126 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: #444546;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.sidebar {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  width: 100px;
+  position: fixed;
+  overflow: auto;
+  background-color: black;
+  color: #89C0C7;
+  font-size: 18px;
+  text-align: center;
+}
+.sidebar.displayContent{
+	display:block;
+}
+div.mainbody {
+  margin-left: 100px;/*same as sidebar width*/
+  padding: 1px 16px;
+  height: inherit;
+  background-color:#444546;
+  color: #89C0C7;
+  font-size: 20px;
+  text-align: center;
+}
+.SelectOption{
+	margin-top:30px;
+}
+.imagesTable{
+	background-color:#444546;
+	width:70%;
+	height:100%;
+	margin-top: 20px;
+	border-color:#444546;
+	border-collapse: separate;
+	border-spacing: 3px 25px;
+	margin-left:40px;
+}
+.imagesTable td,tr{
+		border-color:#444546;
+}
+.imagesTable img{
+		border:none;
+		border-radius:50%;
+		height: 200px;
+}
+.imagesTable.Attackimage{
+	background-color:#89C0C7;
+}
+.imagesTable.Attackimage:hover{
+	background-color:#0E354B;
+}
+.back{
+	background-color:#444546;
+	border:none;
+	width:30px;
+}
+.imagesTable tr,td{
+	width: auto;
+	height:auto;
+	padding:0;
+	margin:0;
+}
+.button4{
+	color: #0E354B;
+	float: right;
+	background-color: #89C0C7;
+	padding: 6px 6px 6px 6px 6px;
+	margin-top:50px;
+	bottom:2px;
+	margin-right: 15px;
+	font-size: 18px;
+	height:40px;
+	width: 110px;
+	border-radius: 10px;
+	border-color:#0E354B;
+	border:none;
+}
+.button4:hover{
+	color:#89C0C7;
+	background-color:#0E354B;
+}
+.button3{
+	color: #0E354B;
+	float: right;
+	background-color:#89C0C7;
+	padding: 6px 6px 6px 6px 6px;
+	margin-top:10px;
+	margin-right: 15px;
+	font-size: 18px;
+	height:40px;
+	width: 350px;
+	border-radius: 10px;
+	/*border-color:#0E354B;*/
+	border:none;
+}
+.button3:hover{
+	color:#89C0C7;
+	background-color:#0E354B;
+}
+
+/*responsiveness
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: 50px;
+    position: relative;
+	margin-top: 6px;
+  }
+  .fas {
+	  float:left;
+	  margin-left: 6px;
+  }
+  div.content {margin-left: 0;}
+  .sidebar.displayContent{
+	float:left;
+}
+}*/
